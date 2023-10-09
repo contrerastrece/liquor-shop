@@ -1,4 +1,4 @@
-const Navbar = () => {
+const Search = () => {
   return (
     <div className="navbar bg-base-100 w-full">
       <div className="form-control w-full">
@@ -12,4 +12,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Search;

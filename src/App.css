@@ -40,3 +40,13 @@
 .read-the-docs {
   color: #888;
 }
+
+.active {
+  color: #46DE99;
+}
+.active .icon{
+  color: #46DE99 !important;
+}
+.active span {
+  color: #46DE99;
+}
