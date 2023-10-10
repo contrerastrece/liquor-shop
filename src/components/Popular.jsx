@@ -1,51 +1,53 @@
-import img1 from "../images/popular1.png";
-import img2 from "../images/popular2.png";
-import img3 from "../images/popular3.png";
+import { useRef, useState } from "react";
+// import img1 from "../images/popular1.png";
+// import img2 from "../images/popular2.png";
+// import img3 from "../images/popular3.png";
+
+import Card from "./Card";
+import Modal from "./Modal";
 
 const Popular = () => {
-  return (
-    <div className="flex flex-col gap-3">
-      <div className="card card-side bg-base-100 shadow-md rounded-lg  p-0 h-36">
-        <figure>
-          <img src={img1} alt="" className="w-32 " />
-        </figure>
-        <div className="card-body text-left">
-          <h2 className="card-title">
-            Smirnoff Lemon Vodka
-          </h2>
-          <div className="text-neutral-400 text-xs font-medium">
-            375ml Can | 5%
-          </div>
-          <p className=" text-emerald-400 text-xl font-medium">$2.99</p>
-        </div>
-      </div>
+  const [dataModal, setdataModal] = useState(null);
+  const modalRef = useRef(null);
 
-      <div className="card card-side bg-base-100 shadow-md rounded-lg p-0 h-36">
-        <figure>
-          <img src={img2} alt="" className=" w-32" />
-        </figure>
-        <div className="card-body text-left">
-          <h2 className="card-title">Jack Daniel’s Cola Whiskey</h2>
-          <div className="text-neutral-400 text-xs font-medium">
-            375ml Can | 5%
-          </div>
-          <p className=" text-emerald-400 text-xl font-medium">$2.99</p>
-        </div>
+
+  const openModal = (data) => {
+    console.log(data);
+    setdataModal(data);
+    if (modalRef.current) {
+      modalRef.current.showModal();
+    }
+  };
+  // Función para cerrar el modal
+  const closeModal = () => {
+    setdataModal(null);
+    if(modalRef.current) {
+      modalRef.current.close();
+
+    }
+  };
+  const cardData = [
+    { id: 1, title: "Tarjeta 1", description: "Descripción de la Tarjeta 1" },
+    { id: 2, title: "Tarjeta 2", description: "Descripción de la Tarjeta 2" },
+  ];
+
+
+  return (
+    <>
+      <div className="flex flex-col gap-3">
+        {cardData.map((data) => (
+          <Card
+            key={data.id}
+            openModal={openModal}
+            data={data}
+          />
+        ))}
       </div>
-      
-      <div className="card card-side bg-base-100 shadow-md rounded-lg p-0 h-36">
-        <figure>
-          <img src={img3} alt="" className=" w-32" />
-        </figure>
-        <div className="card-body text-left">
-          <h2 className="card-title">Jack Daniel’s Cola Whiskey</h2>
-          <div className="text-neutral-400 text-xs font-medium">
-            375ml Can | 5%
-          </div>
-          <p className=" text-emerald-400 text-xl font-medium">$2.99</p>
-        </div>
-      </div>
-    </div>
+     
+      {dataModal !== null && (
+        <Modal data={dataModal} onClose={closeModal} modalRef={modalRef} />
+      )}
+    </>
   );
 };
 

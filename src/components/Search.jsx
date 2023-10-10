@@ -1,6 +1,6 @@
 const Search = () => {
   return (
-    <div className="navbar bg-base-100 w-full">
+    <div className="navbar bg-base-100 w-full  p-0">
       <div className="form-control w-full">
         <input
           type="text"
