@@ -1,0 +1,246 @@
+{
+  "categorias": [
+    {
+      "id": 1,
+      "nombre": "Cerveza",
+      "imagen": "Frame1.svg"
+    },
+    {
+      "id": 2,
+      "nombre": "Ron",
+      "imagen": "Frame2.svg"
+    },
+    {
+      "id": 3,
+      "nombre": "Vino",
+      "imagen": "Frame3.svg"
+    },
+    {
+      "id": 4,
+      "nombre": "Whisky",
+      "imagen": "Frame4.svg"
+    }
+  ],
+  "productos": [
+    {
+      "id": 1,
+      "nombre": "Cerveza Pilsen Callao",
+      "imagen": "cerveza-pilsen.jpg",
+      "cantidad": 24,
+      "descripcion": "Cerveza peruana refrescante",
+      "categoria_id": 1,
+      "porcentaje_alcohol": "4.5%",
+      "cantidad_medida": "355ml",
+      "precio": 19.99
+    },
+    {
+      "id": 2,
+      "nombre": "Cerveza Cusqueña",
+      "imagen": "cerveza-cusquena.jpg",
+      "cantidad": 24,
+      "descripcion": "Cerveza premium de Cusco",
+      "categoria_id": 1,
+      "porcentaje_alcohol": "5.0%",
+      "cantidad_medida": "355ml",
+      "precio": 21.99
+    },
+    {
+      "id": 3,
+      "nombre": "Cerveza Arequipeña",
+      "imagen": "cerveza-arequipena.jpg",
+      "cantidad": 24,
+      "descripcion": "Cerveza artesanal de Arequipa",
+      "categoria_id": 1,
+      "porcentaje_alcohol": "4.8%",
+      "cantidad_medida": "355ml",
+      "precio": 22.99
+    },
+    {
+      "id": 4,
+      "nombre": "Cerveza Cristal",
+      "imagen": "cerveza-cristal.jpg",
+      "cantidad": 24,
+      "descripcion": "Cerveza tradicional peruana",
+      "categoria_id": 1,
+      "porcentaje_alcohol": "4.2%",
+      "cantidad_medida": "355ml",
+      "precio": 18.99
+    },
+    {
+      "id": 5,
+      "nombre": "Cerveza Cervecería del Valle Sagrado",
+      "imagen": "cerveza-sagrado.jpg",
+      "cantidad": 24,
+      "descripcion": "Cerveza artesanal del Valle Sagrado",
+      "categoria_id": 1,
+      "porcentaje_alcohol": "5.5%",
+      "cantidad_medida": "355ml",
+      "precio": 24.99
+    },
+    {
+      "id": 6,
+      "nombre": "Ron Flor de Caña 7 Años",
+      "imagen": "ron-flor-de-cana.jpg",
+      "cantidad": 6,
+      "descripcion": "Ron premium de Nicaragua",
+      "categoria_id": 2,
+      "porcentaje_alcohol": "40%",
+      "cantidad_medida": "750ml",
+      "precio": 79.99
+    },
+    {
+      "id": 7,
+      "nombre": "Ron Diplomático Reserva Exclusiva",
+      "imagen": "ron-diplomatico.jpg",
+      "cantidad": 6,
+      "descripcion": "Ron venezolano de alta calidad",
+      "categoria_id": 2,
+      "porcentaje_alcohol": "40%",
+      "cantidad_medida": "750ml",
+      "precio": 89.99
+    },
+    {
+      "id": 8,
+      "nombre": "Ron Zacapa Centenario 23 Años",
+      "imagen": "ron-zacapa.jpg",
+      "cantidad": 6,
+      "descripcion": "Ron guatemalteco de lujo",
+      "categoria_id": 2,
+      "porcentaje_alcohol": "40%",
+      "cantidad_medida": "750ml",
+      "precio": 99.99
+    },
+    {
+      "id": 9,
+      "nombre": "Ron Appleton Estate 12 Años",
+      "imagen": "ron-appleton.jpg",
+      "cantidad": 6,
+      "descripcion": "Ron jamaicano de 12 años de maduración",
+      "categoria_id": 2,
+      "porcentaje_alcohol": "43%",
+      "cantidad_medida": "750ml",
+      "precio": 69.99
+    },
+    {
+      "id": 10,
+      "nombre": "Ron Santa Teresa 1796",
+      "imagen": "ron-santa-teresa.jpg",
+      "cantidad": 6,
+      "descripcion": "Ron venezolano de alta gama",
+      "categoria_id": 2,
+      "porcentaje_alcohol": "40%",
+      "cantidad_medida": "750ml",
+      "precio": 109.99
+    },
+    {
+      "id": 11,
+      "nombre": "Vino Tinto Malbec",
+      "imagen": "vino-malbec.jpg",
+      "cantidad": 12,
+      "descripcion": "Vino tinto argentino suave y frutal",
+      "categoria_id": 3,
+      "porcentaje_alcohol": "13.5%",
+      "cantidad_medida": "750ml",
+      "precio": 29.99
+    },
+    {
+      "id": 12,
+      "nombre": "Vino Blanco Chardonnay",
+      "imagen": "vino-chardonnay.jpg",
+      "cantidad": 12,
+      "descripcion": "Vino blanco californiano afrutado",
+      "categoria_id": 3,
+      "porcentaje_alcohol": "13%",
+      "cantidad_medida": "750ml",
+      "precio": 24.99
+    },
+    {
+      "id": 13,
+      "nombre": "Vino Tinto Cabernet Sauvignon",
+      "imagen": "vino-cabernet.jpg",
+      "cantidad": 12,
+      "descripcion": "Vino tinto seco y robusto",
+      "categoria_id": 3,
+      "porcentaje_alcohol": "13%",
+      "cantidad_medida": "750ml",
+      "precio": 24.99
+    },
+    {
+      "id": 14,
+      "nombre": "Vino Blanco Sauvignon Blanc",
+      "imagen": "vino-sauvignon.jpg",
+      "cantidad": 12,
+      "descripcion": "Vino blanco chileno refrescante",
+      "categoria_id": 3,
+      "porcentaje_alcohol": "12.5%",
+      "cantidad_medida": "750ml",
+      "precio": 22.99
+    },
+    {
+      "id": 15,
+      "nombre": "Vino Tinto Carmenere",
+      "imagen": "vino-carmenere.jpg",
+      "cantidad": 12,
+      "descripcion": "Vino tinto chileno con notas de frutos rojos",
+      "categoria_id": 3,
+      "porcentaje_alcohol": "13.5%",
+      "cantidad_medida": "750ml",
+      "precio": 26.99
+    },
+    {
+      "id": 16,
+      "nombre": "Whisky Johnnie Walker Black Label",
+      "imagen": "whisky-johnnie-walker.jpg",
+      "cantidad": 6,
+      "descripcion": "Whisky escocés de alta calidad",
+      "categoria_id": 4,
+      "porcentaje_alcohol": "40%",
+      "cantidad_medida": "750ml",
+      "precio": 49.99
+    },
+    {
+      "id": 17,
+      "nombre": "Whisky Glenfiddich 12 Años",
+      "imagen": "whisky-glenfiddich.jpg",
+      "cantidad": 6,
+      "descripcion": "Whisky escocés de malta suave y afrutado",
+      "categoria_id": 4,
+      "porcentaje_alcohol": "40%",
+      "cantidad_medida": "750ml",
+      "precio": 59.99
+    },
+    {
+      "id": 18,
+      "nombre": "Whisky Jameson Irish Whiskey",
+      "imagen": "whisky-jameson.jpg",
+      "cantidad": 6,
+      "descripcion": "Whisky irlandés suave y versátil",
+      "categoria_id": 4,
+      "porcentaje_alcohol": "40%",
+      "cantidad_medida": "750ml",
+      "precio": 39.99
+    },
+    {
+      "id": 19,
+      "nombre": "Whisky Macallan Double Cask 12 Años",
+      "imagen": "whisky-macallan.jpg",
+      "cantidad": 6,
+      "descripcion": "Whisky escocés de malta envejecido en roble",
+      "categoria_id": 4,
+      "porcentaje_alcohol": "40%",
+      "cantidad_medida": "750ml",
+      "precio": 69.99
+    },
+    {
+      "id": 20,
+      "nombre": "Whisky Jack Daniel's Old No. 7",
+      "imagen": "whisky-jack-daniels.jpg",
+      "cantidad": 6,
+      "descripcion": "Whisky americano suave y ahumado",
+      "categoria_id": 4,
+      "porcentaje_alcohol": "40%",
+      "cantidad_medida": "750ml",
+      "precio": 44.99
+    }
+  ]
+}
