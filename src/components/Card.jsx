@@ -2,17 +2,17 @@ import beer1 from "../images/beer1.png";
 const Card = ({ data, openModal }) => {
   return (
     <div
-      className="card card-side card-compact bg-base-100 shadow-md rounded-lg p-0 h-36 cursor-pointer "
+      className="card card-side bg-base-100 shadow-md rounded-lg p-0 h-36 cursor-pointer"
       onClick={() => {
         openModal(data);
       }}
     >
-      <figure className="w-36 h-36 ">
-        <img src={beer1} alt="" className="w-full h-32 object-contain" />
+      <figure className="w-36 h-36">
+        <img src={beer1} alt="" className="w-36 h-32 object-contain" />
       </figure>
-      <div className="card-body text-left">
-        <div className="card-title w-[20rem] truncate">
-          <p className="truncate">{data.nombre}</p>
+      <div className="card-body text-left w-[calc(100%_-_9rem)]">
+        <div className="">
+          <h3 className="font-semibold text-lg md:text-2xl truncate">{data.nombre}</h3>         
         </div>
         <div className="text-neutral-400 text-xs font-medium">
           {data.cantidad_medida} Can | {data.porcentaje_alcohol}

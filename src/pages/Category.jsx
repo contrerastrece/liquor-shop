@@ -42,9 +42,11 @@ const Category = () => {
       <h2>{category}</h2>
 
       <Search />
-      {productFilter.map((p, index) => (
-        <Card data={p} key={index} openModal={openModal}/>
-      ))}
+      <div className="flex flex-col gap-3">
+        {productFilter.map((p, index) => (
+          <Card data={p} key={index} openModal={openModal} />
+        ))}
+      </div>
 
       {dataModal !== null && (
         <Modal data={dataModal} onClose={closeModal} modalRef={modalRef} />

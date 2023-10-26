@@ -1,12 +1,11 @@
-
 const Toast = () => {
   return (
-    <div className="toast">
-    <div className="alert alert-success bg-accent">
-      <span>New message arrived.</span>
+    <div className="toast toast-top toast-end ">
+      <div className="alert btn-primary border p-3">
+        <span className="text-white">Product Add. 🎉</span>
+      </div>
     </div>
-  </div>
-  )
-}
+  );
+};
 
-export default Toast
+export default Toast;
