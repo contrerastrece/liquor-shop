@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom";
-import data from "../data/data.json";
+// import data from "../data/data.json";
+import useCart from "../hooks/useCart";
 const Carousel = () => {
+
+  const {productos}=useCart()
+
   return (
     <div className="carousel carousel-center max-w-md space-x-4 p-1">
-      {data.categorias.map((c,index) => (
+      {productos.categorias.map((c,index) => (
         <Link to={`../pages/Category/${c.nombre}`} key={index}>
           <div className="carousel-item">
             <div className="card bg-base-100 shadow-md">

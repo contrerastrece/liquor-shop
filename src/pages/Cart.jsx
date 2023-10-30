@@ -1,9 +1,13 @@
 import { HiChevronLeft } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import CartItem from "../components/CartItem";
+import useCart from "../hooks/useCart";
 
-const Cart = ({cart,deleteToCart}) => {
-  console.log(cart);
+const Cart = () => {
+  const {cart}=useCart()
+  console.log(cart,'💔');
+
+
   return (
     <div className="relative">
       <Link to="/">
@@ -12,10 +16,10 @@ const Cart = ({cart,deleteToCart}) => {
 
       <h2 className="text-[2rem]">Cart</h2>
 
-      {cart.length ? (
-        <div className="flex flex-col gap-3 relative border">
-          {cart.map((item, i) => (
-            <CartItem key={i} data={item} deleteToCart={deleteToCart}/>
+      {cart.length>0 ? (
+        <div className="flex flex-col gap-3 relative ">
+          {cart.map((item) => (
+            <CartItem key={item.id} data={item}/>
           ))}
           <div className="sticky bottom-20">
             <button className="btn btn-block btn-success text-white">

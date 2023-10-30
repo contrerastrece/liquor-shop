@@ -2,9 +2,13 @@ import React, { useState } from "react";
 import img1 from "../images/popular1.png";
 import { HiChevronLeft, HiMinus } from "react-icons/hi";
 import { HiPlus } from "react-icons/hi";
+import useCart from "../hooks/useCart";
 
-const CartItem = ({data,deleteToCart}) => {
-  console.log(data);
+const CartItem = ({data}) => {
+
+  const {deleteToCart}=useCart()
+
+  console.log(data,'🎉');
   const [count, setCount] = useState(1);
   
   const handleRestar = () => {
@@ -25,13 +29,13 @@ const CartItem = ({data,deleteToCart}) => {
 const price = count * data.precio;
   
   return (
-    <div className="card card-side bg-base-100 shadow-md rounded-lg  p-0 h-36 border border-red-500 relative">
+    <div className="card card-side bg-base-100 shadow-md rounded-lg  p-0 h-36 relative">
       <figure>
         <img src={img1} alt="" className="w-32 " />
       </figure>
       <div className="card-body text-left p-4 justify-between ">
         <div className="flex flex-col gap-1">
-        <h2 className="font-semibold md:card-title border">{data.nombre}</h2>
+        <h2 className="font-semibold md:card-title ">{data.nombre}</h2>
         <div className="text-neutral-400 text-xs font-medium">
           {data.cantidad_medida} Can | {data.porcentaje_alcohol}
         </div>
@@ -62,7 +66,7 @@ const price = count * data.precio;
           </span>
         </div>
       </div>
-      <div className="absolute top-0 right-0 " onClick={()=>deleteToCart(data.id)}>X</div>
+      <div className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2" onClick={()=>deleteToCart(data.id)}>✕</div>
     </div>
   );
 };

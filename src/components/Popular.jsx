@@ -3,11 +3,13 @@ import { useReducer, useRef, useState } from "react";
 import Card from "./Card";
 import Modal from "./Modal";
 import Toast from "./Toast";
+import useCart from "../hooks/useCart";
 
-const Popular = ({productos,addToCart}) => {
+const Popular = () => {
   const [dataModal, setdataModal] = useState(null);
   const [showToast, setShowToast] = useState(false);
   const modalRef = useRef(null);
+  const {productos}=useCart()
 
 
   const openModal = (data) => {
@@ -35,13 +37,13 @@ const Popular = ({productos,addToCart}) => {
   return (
     <>
       <div className="flex flex-col gap-3">
-        {productos.map((p) => (
+        {productos.productos.map((p) => (
           <Card key={p.id} openModal={openModal} data={p} />
         ))}
       </div>
 
       {dataModal !== null && (
-        <Modal data={dataModal} onClose={closeModal} modalRef={modalRef} addToCart={addToCart}/>
+        <Modal data={dataModal} onClose={closeModal} modalRef={modalRef} />
       )}
       {showToast && <Toast/>}
     </>

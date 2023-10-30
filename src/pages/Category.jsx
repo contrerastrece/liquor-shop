@@ -43,8 +43,8 @@ const Category = () => {
 
       <Search />
       <div className="flex flex-col gap-3">
-        {productFilter.map((p, index) => (
-          <Card data={p} key={index} openModal={openModal} />
+        {productFilter.map(p => (
+          <Card data={p} key={p.id} openModal={openModal} />
         ))}
       </div>
 

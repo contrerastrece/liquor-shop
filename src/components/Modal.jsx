@@ -1,12 +1,12 @@
-import { useEffect, useReducer, useState } from "react";
-
+import { useEffect, useState } from "react";
 import { HiMinus } from "react-icons/hi";
 import { HiPlus } from "react-icons/hi";
 import beer1 from "../images/beer1.png";
-import { TYPES } from "../actions/cartAction";
+import useCart from "../hooks/useCart";
 
-const Modal = ({ onClose, data, modalRef ,addToCart}) => {
+const Modal = ({ onClose, data, modalRef }) => {
   const [count, setCount] = useState(1);
+  const {addToCart}=useCart()
 
 
   const handleRestar = () => {
@@ -29,7 +29,7 @@ const Modal = ({ onClose, data, modalRef ,addToCart}) => {
     if (modalRef.current) {
       modalRef.current.close();
       onClose();
-      setCount(1)
+      // setCount(1)
     }
 
   };
@@ -50,7 +50,7 @@ const Modal = ({ onClose, data, modalRef ,addToCart}) => {
           </figure>
 
           <div className="card-body text-left">
-            <h3 className="card-title text-2xl">{data.nombre}</h3>
+            <h3 className="card-title text-xl">{data.nombre}</h3>
             <div className="text-neutral-400 text-xs font-medium">
               {data.cantidad_medida} Can | {data.porcentaje_alcohol}
             </div>
