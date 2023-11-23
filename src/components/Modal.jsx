@@ -22,7 +22,7 @@ const Modal = ({ onClose, data, modalRef }) => {
   const price = count * data.precio;
 
   const handleAdd = (id) => {
-    console.log(id);
+    // console.log(id);
 
     addToCart(id);
 

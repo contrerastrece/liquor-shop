@@ -45,7 +45,7 @@ const Popular = () => {
       {dataModal !== null && (
         <Modal data={dataModal} onClose={closeModal} modalRef={modalRef} />
       )}
-      {showToast && <Toast/>}
+      {showToast && <Toast text="producto Agregado" toastColor="primary"/>}
     </>
   );
 };

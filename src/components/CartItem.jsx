@@ -6,13 +6,14 @@ import useCart from "../hooks/useCart";
 
 const CartItem = ({data}) => {
 
-  const {deleteToCart}=useCart()
+  const {deleteToCart,increment,decrement}=useCart()
 
-  console.log(data,'🎉');
-  const [count, setCount] = useState(1);
+  // console.log(data,'🎉');
+  const [count, setCount] = useState(data.quantity);
   
-  const handleRestar = () => {
-    console.log(count);
+  const handleRestar = (id) => {
+    // console.log(count);
+    decrement(id);
     if (count <= 1) {
       return;
     }
@@ -20,13 +21,20 @@ const CartItem = ({data}) => {
     
   };
 
-  const handleSumar = () => {
-    console.log(count);
+  const handleSumar = (id) => {
+    increment(id);
+    // console.log(count);
     setCount(count + 1);
     
   };
 
 const price = count * data.precio;
+
+const DeleteItemFromCart =(id) => {
+  alert("Estas seguro de eliminar el producto del cart")
+  deleteToCart(id);
+
+};
   
   return (
     <div className="card card-side bg-base-100 shadow-md rounded-lg  p-0 h-36 relative">
@@ -48,7 +56,7 @@ const price = count * data.precio;
               className={`btn btn-xs btn-outline ${
                 count === 1 ? "btn-disabled" : "btn-success"
               }`}
-              onClick={handleRestar}
+              onClick={()=>handleRestar(data.id)}
               disabled={count === 1}
             >
               <HiMinus />
@@ -56,7 +64,8 @@ const price = count * data.precio;
             <span className="text-[1rem]">{count}</span>
             <button
               className="btn btn-xs btn-outline btn-success"
-              onClick={handleSumar}
+              onClick={()=>handleSumar(data.id)}
+              
             >
               <HiPlus />
             </button>
@@ -66,7 +75,7 @@ const price = count * data.precio;
           </span>
         </div>
       </div>
-      <div className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2" onClick={()=>deleteToCart(data.id)}>✕</div>
+      <div className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2" onClick={()=>DeleteItemFromCart(data.id)}>✕</div>
     </div>
   );
 };

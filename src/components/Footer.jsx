@@ -12,11 +12,11 @@ const Footer = () => {
           <HiOutlineHome className="icon"/>
           <span className="text-[#979797]">Home</span>
         </NavLink>
-        <NavLink to="/pages/Promotion">
+        <NavLink to="/Promotion">
           <HiOutlineReceiptPercent className="icon" />
           <span className="text-[#979797]">Promotion</span>
         </NavLink>
-        <NavLink to="/pages/Cart">
+        <NavLink to="/Cart">
           <HiOutlineTicket className="icon"/>
           <span className="text-[#979797]">Cart</span>
         </NavLink>
