@@ -4,7 +4,8 @@ import { HiOutlineReceiptPercent } from "react-icons/hi2";
 import { HiOutlineTicket } from "react-icons/hi2";
 import {NavLink } from "react-router-dom";
 import '../app.css';
-const Footer = () => {
+import { HiOutlineUser } from "react-icons/hi";
+export const Footer = () => {
   return (
     <IconContext.Provider value={{ color: "#979797", size: "1.8rem" }}>
       <div className="btm-nav">
@@ -20,9 +21,12 @@ const Footer = () => {
           <HiOutlineTicket className="icon"/>
           <span className="text-[#979797]">Cart</span>
         </NavLink>
+        <NavLink to="/Profile">
+          <HiOutlineUser className="icon"/>
+          <span className="text-[#979797]">Profile</span>
+        </NavLink>
       </div>
     </IconContext.Provider>
   );
 };
 
-export default Footer;

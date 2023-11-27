@@ -1,19 +1,18 @@
-import { HiChevronLeft } from "react-icons/hi";
+import { HiChevronLeft } from "react-icons/hi2";
 import { Link } from "react-router-dom";
 import CartItem from "../components/CartItem";
 import useCart from "../hooks/useCart";
 
-const Cart = () => {
+export const Cart = () => {
   const { cart } = useCart();
   // console.log(cart, "💔");
 
   return (
     <div className="relative">
-      <Link to="/">
+      <Link to="/" className="flex items-center mb-5">
         <HiChevronLeft style={{ fontSize: "2rem" }} />
+        <h2 className="text-4xl">Cart</h2>
       </Link>
-
-      <h2 className="text-[2rem]">Cart</h2>
 
       {cart.length > 0 ? (
         <div className="flex flex-col gap-3 relative ">
@@ -32,5 +31,3 @@ const Cart = () => {
     </div>
   );
 };
-
-export default Cart;

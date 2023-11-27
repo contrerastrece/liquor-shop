@@ -5,7 +5,7 @@ import data from "../data/data.json";
 import Modal from "../components/Modal";
 import { useRef, useState } from "react";
 
-const Category = () => {
+export const Category = () => {
   const { category } = useParams();
 
   const [dataModal, setdataModal] = useState(null);
@@ -55,4 +55,3 @@ const Category = () => {
   );
 };
 
-export default Category;
