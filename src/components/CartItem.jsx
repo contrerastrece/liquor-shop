@@ -37,7 +37,7 @@ const DeleteItemFromCart =(id) => {
 };
   
   return (
-    <div className="card card-side bg-base-100 shadow-md rounded-lg  p-0 h-36 relative">
+    <div className="card card-side bg-base-100 border-2 rounded-lg p-2 relative">
       <figure>
         <img src={img1} alt="" className="w-32 " />
       </figure>
@@ -61,7 +61,7 @@ const DeleteItemFromCart =(id) => {
             >
               <HiMinus />
             </button>
-            <span className="text-[1rem]">{count}</span>
+            <span className="text-sm">{count}</span>
             <button
               className="btn btn-xs btn-outline btn-success"
               onClick={()=>handleSumar(data.id)}
@@ -70,11 +70,12 @@ const DeleteItemFromCart =(id) => {
               <HiPlus />
             </button>
           </div>
-          <span className=" text-emerald-400 text-xl font-semibold  justify-end">
+          <span className=" text-emerald-400 text-md font-semibold  justify-end">
             $ {price.toFixed(2)}
           </span>
         </div>
       </div>
+
       <div className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2" onClick={()=>DeleteItemFromCart(data.id)}>✕</div>
     </div>
   );

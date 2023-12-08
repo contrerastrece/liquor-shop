@@ -50,9 +50,10 @@
 .active .icon{
   color: #46DE99 !important;
 }
+
 .active span {
   color: #46DE99;
-}
+} 
 .btn {
   text-transform: none !important;  
 }

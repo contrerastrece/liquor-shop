@@ -6,14 +6,14 @@ const Carousel = () => {
   const {productos}=useCart()
 
   return (
-    <div className="carousel carousel-center max-w-md space-x-4 p-1">
+    <div className="carousel carousel-center max-w-md space-x-4 p-1 ">
       {productos.categorias.map((c,index) => (
-        <Link to={`../pages/Category/${c.nombre}`} key={index}>
-          <div className="carousel-item">
-            <div className="card bg-base-100 shadow-md">
+        <Link to={`/Category/${c.nombre}`} key={index}>
+          <div className="carousel-item border rounded-2xl ">
+            <div className="card bg-base-100 hover:bg-base-200">
               <div className="card-body p-0 w-28">
                 <img src={`src/images/${c.imagen}`} className="rounded-box h-28" alt={c.nombre}/>
-                <p>{c.nombre}</p>
+                <p className="font-semibold text-lg">{c.nombre}</p>
               </div>
             </div>
           </div>

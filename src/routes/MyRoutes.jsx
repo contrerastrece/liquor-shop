@@ -25,7 +25,7 @@ export const MyRoutes = () => {
           </ProtectedRouted>
         }
       >
-        <Route index element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/Promotion" element={<Promotion />} />
         <Route path="/Cart" element={<Cart />} />
         <Route path="/Category/:category" element={<Category />} />

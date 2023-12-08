@@ -97,7 +97,7 @@ const Modal = ({ onClose, data, modalRef }) => {
             </button>
           </form>
           <button
-            className="btn btn-primary btn-block text-white"
+            className="btn btn-success btn-block text-white"
             onClick={() => handleAdd(data.id)}
           >
             Add to Cart
