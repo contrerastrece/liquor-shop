@@ -1,18 +1,21 @@
 import { Link, useParams } from "react-router-dom";
 import Search from "../components/Search";
 import Card from "../components/Card";
-import data from "../data/data.json";
 import Modal from "../components/Modal";
 import { useRef, useState } from "react";
 import { HiChevronLeft } from "react-icons/hi2";
+import { useProductsStore } from "../store/ProductsStore";
+import { useCategoriesStore } from "../store/CategoriesStore";
 
 export const Category = () => {
   const { category } = useParams();
 
+  const dataproducts=useProductsStore((state)=>state.dataproducts);
+  const datacategories=useCategoriesStore((state)=>state.datacategories);
+  console.log(dataproducts);
   const [dataModal, setdataModal] = useState(null);
   const modalRef = useRef(null);
-
-  console.log(data);
+  
   const openModal = (data) => {
     console.log(data);
     setdataModal(data);
@@ -29,9 +32,10 @@ export const Category = () => {
   };
 
   const category_filter = (cat) => {
-    const catID = data.categorias.find((c) => c.nombre === cat);
-    const filterProducts = data.productos.filter(
-      (p) => p.categoria_id === catID.id
+    const catID = datacategories.find((c) => c.name === cat);
+    console.log(catID);
+    const filterProducts = dataproducts.filter(
+      (p) => p.category_id === catID.id
     );
 
     return filterProducts;

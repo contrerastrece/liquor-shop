@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { HiMinus } from "react-icons/hi";
 import { HiPlus } from "react-icons/hi";
-import beer1 from "../images/beer1.png";
 import useCart from "../hooks/useCart";
 
 const Modal = ({ onClose, data, modalRef }) => {
@@ -19,7 +18,7 @@ const Modal = ({ onClose, data, modalRef }) => {
     setCount(count + 1);
   };
 
-  const price = count * data.precio;
+  const price = count * data.price;
 
   const handleAdd = (id) => {
     // console.log(id);
@@ -46,13 +45,13 @@ const Modal = ({ onClose, data, modalRef }) => {
         <div className="card card-side card-compact p-0">
           <figure className="w-36 h-36">
             {/* <img src={`src/images/${data.imagen}`} alt="" className="w-32 " /> */}
-            <img src={beer1} alt="" className="w-32 h-36 object-contain" />
+            <img src={data.img} alt="" className="w-32 h-36 object-contain" />
           </figure>
 
           <div className="card-body text-left">
-            <h3 className="card-title text-xl">{data.nombre}</h3>
+            <h3 className="card-title text-xl">{data.name}</h3>
             <div className="text-neutral-400 text-xs font-medium">
-              {data.cantidad_medida} Can | {data.porcentaje_alcohol}
+              {data.quantity_measure} Can | {data.porcentage_alcohol}
             </div>
             <div className="flex justify-between">
               <div className="flex flex-col justify-between h-14">

@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import { HiChevronLeft, HiPower } from "react-icons/hi2";
 import { HiChevronRight } from "react-icons/hi2";
 import { HiOutlineWallet } from "react-icons/hi2";
@@ -8,7 +7,6 @@ import { useAuthStore } from "../store/AuthStore";
 import { Link } from "react-router-dom";
 import { useUsuariosStore } from "../store/UserStore";
 export const Profile = ({ user }) => {
-  const [theme, setTheme] = useState(false);
   const { signOut } = useAuthStore();
   const { datausuarios, updateUser } = useUsuariosStore();
   const themebd = datausuarios[0].theme === "0" ? "light" : "dark";

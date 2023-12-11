@@ -2,22 +2,22 @@
   "categorias": [
     {
       "id":1,
-      "nombre": "Cerveza",
+      "nombre": "cerveza",
       "imagen": "Frame1.svg"
     },
     {
       "id": 2,
-      "nombre": "Ron",
+      "nombre": "ron",
       "imagen": "Frame2.svg"
     },
     {
       "id": 3,
-      "nombre": "Vino",
+      "nombre": "vino",
       "imagen": "Frame3.svg"
     },
     {
       "id": 4,
-      "nombre": "Whisky",
+      "nombre": "whisky",
       "imagen": "Frame4.svg"
     }
   ],

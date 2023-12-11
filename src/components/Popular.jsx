@@ -4,12 +4,14 @@ import Card from "./Card";
 import Modal from "./Modal";
 import Toast from "./Toast";
 import useCart from "../hooks/useCart";
+import { useProductsStore } from "../store/ProductsStore";
 
 const Popular = () => {
   const [dataModal, setdataModal] = useState(null);
   const [showToast, setShowToast] = useState(false);
   const modalRef = useRef(null);
-  const {productos}=useCart()
+  // const {productos}=useCart()
+  const dataproducts=useProductsStore((state)=>state.dataproducts);
 
 
   const openModal = (data) => {
@@ -37,7 +39,7 @@ const Popular = () => {
   return (
     <>
       <div className="flex flex-col gap-3">
-        {productos.productos.map((p) => (
+        {dataproducts.map((p) => (
           <Card key={p.id} openModal={openModal} data={p} />
         ))}
       </div>
@@ -45,7 +47,7 @@ const Popular = () => {
       {dataModal !== null && (
         <Modal data={dataModal} onClose={closeModal} modalRef={modalRef} />
       )}
-      {showToast && <Toast text="producto Agregado" toastColor="primary"/>}
+      {showToast && <Toast text="producto Agregado" toastColor="success"/>}
     </>
   );
 };
